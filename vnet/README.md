@@ -2,6 +2,8 @@
 
 Episode 1 of this series is comprised of an Azure subscription, the free version of Terraform, and a virtual network with a public subnet hosting a bastion host for jumping to worker hosts deployed to a private subnet. It’s a basic start for an enterprise-y network with the intent of segmenting off networks for security.
 
+Here's the post to accompany the episode: https://medium.com/@shouldroforion/azure-terraform-part-1-building-a-basic-bastion-worker-host-virtual-network-c8bcc419cfc9
+
 ## Getting your environment ready for deployment
 
 If you don't know it already, get your Azure subscription id with the Azure CLI. Once you have that, you're going to set some environment variables, including your Azure subscription, tenant id, client id, and client secret in environment variables. You'll also create a Service Principal for role-based access so you don't have to keep manually logging in with `az login`.

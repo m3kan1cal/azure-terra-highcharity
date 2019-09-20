@@ -1,0 +1,12 @@
+# cloud-config
+apt_upgrade: true
+packages:
+  - nginx
+runcmd:
+  - add-apt-repository ppa:certbot/certbot -y
+  - apt-get update
+  - apt install python-certbot-nginx -y
+write_files:
+  - owner: root:root
+    path: /etc/cron.d/letsencrypt_renew
+    content: "15 3 * * * /usr/bin/certbot renew --quiet"
